@@ -110,6 +110,8 @@ services:
       GF_PLUGINS_PREINSTALL_DISABLED: "true"
       GF_PLUGINS_PREINSTALL_AUTO_UPDATE: "false"
       GF_PLUGINS_PLUGIN_ADMIN_ENABLED: "false"
+      GF_PLUGINS_DISABLE_PLUGINS: "mssql,elasticsearch,jaeger,zipkin,stackdriver,tempo,opentsdb,mysql,grafana-postgresql-datasource,grafana-pyroscope-datasource,influxdb,grafana-pyroscope-app,grafana-exploretraces-app,grafana-advisor-app,grafana-metricsdrilldown-app,grafana-lokiexplore-app"
+      GOMEMLIMIT: 512MiB
       GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/recipe-overview.json
     ports: ["127.0.0.1:${GRAFANA_HTTP_PORT:-3000}:3000"]
     volumes:
@@ -119,7 +121,7 @@ services:
     tmpfs: ["/tmp:uid=472,gid=472,mode=1777"]
     networks: [monitoring_net, management_net]
     depends_on: [prometheus]
-    mem_limit: 384m
+    mem_limit: 768m
   cadvisor:
     <<: *defaults
     image: gcr.io/cadvisor/cadvisor@sha256:3de2bd5203120b866d74a9b283b2ffb8ec382fbf9dc321814700c6ea6f44ec57

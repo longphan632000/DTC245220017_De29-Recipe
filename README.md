@@ -110,6 +110,14 @@ Các UI chỉ bind localhost. Nếu demo từ máy khác, dùng SSH tunnel đế
 | Hardening | `docker-compose.yml`, `docs/HARDENING.md`, kết quả runtime |
 | Báo cáo và demo | `docs/`, `minh-chung/`; bìa do sinh viên tự bổ sung |
 
+## Báo cáo và minh chứng
+
+- [Báo cáo Word 16 trang](docs/Bao_cao_De29_Recipe.docx) và [bản PDF](docs/Bao_cao_De29_Recipe.pdf); bổ sung bìa trước khi nộp.
+- [Hướng dẫn bàn giao và demo](docs/BAN_GIAO.md).
+- [Ảnh giao diện và dữ liệu kiểm chứng](minh-chung/): 51/51 kiểm tra tích hợp đạt; 8/8 kiểm tra cài mới từ GitHub đạt.
+
+![Trang chủ Recipe](minh-chung/Hinh_01_Trang_chu_Recipe.png)
+
 ## Khung tham khảo
 
 Cách chia thư mục và các lớp dịch vụ tham khảo [Khanhslee/DTC245220024_De7-Blog-CMS](https://github.com/Khanhslee/DTC245220024_De7-Blog-CMS). Mã ứng dụng Recipe, dữ liệu, cấu hình provisioning, kiểm thử và báo cáo được xây dựng cho Đề 29. Chứng chỉ/private key và mật khẩu từ repo tham khảo không được sử dụng.
