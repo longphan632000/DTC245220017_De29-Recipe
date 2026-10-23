@@ -1,0 +1,9 @@
+THOI DIEM 2026-10-24T00:15:18+07:00
+LENH python3 scripts/backup.py; stat và kiểm tra gzip
+EXIT 0
+
+/home/longphan/DTC245220017-De 29/runtime/backups/recipe-20261024-001522.sql.gz
+File mode: 0o600
+Size bytes: 24959
+Gzip can be read: True
+Git ignored: True

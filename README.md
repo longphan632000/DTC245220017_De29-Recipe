@@ -112,8 +112,10 @@ Các UI chỉ bind localhost. Nếu demo từ máy khác, dùng SSH tunnel đế
 
 ## Báo cáo và minh chứng
 
-- [Báo cáo Word 16 trang](docs/Bao_cao_De29_Recipe.docx) và [bản PDF](docs/Bao_cao_De29_Recipe.pdf); bổ sung bìa trước khi nộp.
+- [Báo cáo Word 45 trang](docs/Bao_cao_De29_Recipe.docx) và [bản PDF](docs/Bao_cao_De29_Recipe.pdf); bổ sung bìa trước khi nộp.
+- Bản mở rộng có **52 hình**, hướng dẫn triển khai và thao tác website theo từng bước, trích cấu hình thực tế, giải thích PromQL/LogQL, kiểm chứng hardening và xử lý sự cố.
 - [Hướng dẫn bàn giao và demo](docs/BAN_GIAO.md).
+- [Minh chứng chi tiết và nguồn output lệnh](minh-chung/chi-tiet/README.md): ảnh UI thật, TXT/JSON nguồn và sơ đồ kỹ thuật. Mỗi hình CLI được ghi rõ là bản trình bày output lệnh thực tế.
 - [Ảnh giao diện và dữ liệu kiểm chứng](minh-chung/): 51/51 kiểm tra tích hợp đạt; 8/8 kiểm tra cài mới từ GitHub đạt.
 
 ![Trang chủ Recipe](minh-chung/Hinh_01_Trang_chu_Recipe.png)

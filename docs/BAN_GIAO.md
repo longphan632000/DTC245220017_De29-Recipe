@@ -47,7 +47,11 @@ Khi cài từ máy mới, chạy `python3 scripts/setup.py` theo README để t�
 
 ## Báo cáo và dữ liệu được giữ lại
 
-Báo cáo Word/PDF có 16 trang nội dung, sơ đồ kiến trúc, mô hình dữ liệu và ảnh chụp giao diện thực tế. Sinh viên tự bổ sung bìa.
+Báo cáo Word/PDF đã mở rộng từ 16 lên **45 trang nội dung với 52 hình**. Tài liệu trình bày lệnh triển khai, cấu hình Compose/Nginx/Prometheus/Grafana/Loki/Promtail, SQL, quy trình thêm/sửa/lưu trữ/khôi phục công thức, cách đọc dashboard, giải thích PromQL/LogQL, hardening, kiểm thử, sao lưu và xử lý sự cố. Sinh viên tự bổ sung bìa.
+
+Ảnh UI được chụp trực tiếp từ hệ thống. Hình CLI là bản trình bày output lệnh thật, có TXT và JSON nguồn trong `minh-chung/chi-tiet/`. Phụ lục báo cáo liệt kê số hình và trang để đối chiếu. Bản ghi thử thao tác website đã được dọn sau khi chụp, giữ nguyên sáu công thức mẫu.
+
+Lần kiểm thử tích hợp gần nhất được ghi nhận lúc 00:00:41 ngày 24/10/2026: 51/51 đạt. MySQL error log có thể không phát sinh dòng mới khi hoạt động bình thường; minh chứng và test nguồn này dùng khoảng bảy ngày, các truy vấn log hoạt động khác dùng một giờ. Kết quả cài mới 8/8 được giữ với thời điểm và commit gốc trong `reproducibility.json`.
 
 Bản này dùng PHP/MySQL theo khung repo mẫu, thay cho WordPress đã cài thử trước đó. Các bảng WordPress cũ và volume cũ được giữ để bảo toàn dữ liệu; ứng dụng Recipe không sử dụng chúng. Cài mới từ GitHub chỉ tạo năm bảng ứng dụng. Bản sao cấu hình/dữ liệu trước khi triển khai nằm ngoài Git tại `/home/longphan/recipe-safety/`.
 

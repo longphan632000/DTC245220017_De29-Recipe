@@ -1,0 +1,11 @@
+THOI DIEM 2026-10-24T00:15:18+07:00
+LENH sh -c uname -sr; . /etc/os-release; echo "$PRETTY_NAME"; docker --version; docker compose version; git --version; gh --version | head -1; python3 --version
+EXIT 0
+
+Linux 7.0.0-38-generic
+Ubuntu 24.04.2 LTS
+Docker version 29.7.2, build a7dcaa6
+Docker Compose version v5.5.0
+git version 2.43.0
+gh version 2.45.0 (2025-07-18 Ubuntu 2.45.0-1ubuntu0.3)
+Python 3.12.3

@@ -1,0 +1,5 @@
+THOI DIEM 2026-10-24T00:15:18+07:00
+LENH CREATE TABLE __report_denied_probe_20261024 (id INT);
+EXIT 1
+
+ERROR 1142 (42000) at line 1: CREATE command denied to user 'recipe_user'@'localhost' for table '__report_denied_probe_20261024'

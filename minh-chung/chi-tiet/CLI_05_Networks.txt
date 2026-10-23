@@ -1,0 +1,12 @@
+THOI DIEM 2026-10-24T00:15:18+07:00
+LENH docker network inspect recipe_db_net recipe_web_net recipe_monitoring_net recipe_management_net
+EXIT 0
+
+recipe_db_net  internal=True
+  recipe-app-1, recipe-db-1, recipe-mysql-exporter-1, recipe-phpmyadmin-1
+recipe_management_net  internal=False
+  recipe-grafana-1, recipe-loki-1, recipe-prometheus-1
+recipe_monitoring_net  internal=True
+  recipe-cadvisor-1, recipe-grafana-1, recipe-loki-1, recipe-mysql-exporter-1, recipe-nginx-1, recipe-nginx-exporter-1, recipe-prometheus-1, recipe-promtail-1
+recipe_web_net  internal=False
+  recipe-app-1, recipe-nginx-1, recipe-phpmyadmin-1

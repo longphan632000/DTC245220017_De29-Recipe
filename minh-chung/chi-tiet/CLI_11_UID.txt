@@ -1,0 +1,7 @@
+THOI DIEM 2026-10-24T00:15:18+07:00
+LENH sh -c docker compose exec -T app id; docker compose exec -T nginx id; docker compose exec -T db id
+EXIT 0
+
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+uid=101(nginx) gid=101(nginx) groups=101(nginx)
+uid=999(mysql) gid=999(mysql) groups=999(mysql)

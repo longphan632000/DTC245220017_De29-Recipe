@@ -14,46 +14,30 @@
         },
         "values": [
           [
-            "1792750648253518293",
-            "[23-Oct-2026 17:17:28 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T17:17:28+07:00\",\"user_id\":1}"
+            "1792774836819145367",
+            "[24-Oct-2026 00:00:36 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-24T00:00:36+07:00\",\"user_id\":1}"
           ],
           [
-            "1792749734875354093",
-            "[23-Oct-2026 17:02:14 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T17:02:14+07:00\",\"user_id\":1}"
-          ],
-          [
-            "1792749543034300397",
-            "[23-Oct-2026 16:59:02 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T16:59:02+07:00\",\"user_id\":1}"
-          ],
-          [
-            "1792749359899739267",
-            "[23-Oct-2026 16:55:59 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T16:55:59+07:00\",\"user_id\":1}"
-          ],
-          [
-            "1792749211948633564",
-            "[23-Oct-2026 16:53:31 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T16:53:31+07:00\",\"user_id\":1}"
-          ],
-          [
-            "1792749155245594243",
-            "[23-Oct-2026 16:52:35 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T16:52:35+07:00\",\"user_id\":1}"
+            "1792774768375713105",
+            "[23-Oct-2026 23:59:28 Asia/Ho_Chi_Minh] {\"event\":\"login_success\",\"time\":\"2026-10-23T23:59:28+07:00\",\"user_id\":1}"
           ]
         ]
       }
     ],
     "stats": {
       "summary": {
-        "bytesProcessedPerSecond": 2009780,
-        "linesProcessedPerSecond": 21566,
-        "totalBytesProcessed": 25255,
-        "totalLinesProcessed": 271,
-        "execTime": 0.012566,
-        "queueTime": 0.000374,
+        "bytesProcessedPerSecond": 2523154,
+        "linesProcessedPerSecond": 28203,
+        "totalBytesProcessed": 16998,
+        "totalLinesProcessed": 190,
+        "execTime": 0.006737,
+        "queueTime": 0.000432,
         "subqueries": 0,
-        "totalEntriesReturned": 6,
+        "totalEntriesReturned": 2,
         "splits": 2,
         "shards": 2,
-        "totalPostFilterLines": 6,
-        "totalStructuredMetadataBytesProcessed": 2168
+        "totalPostFilterLines": 2,
+        "totalStructuredMetadataBytesProcessed": 1520
       },
       "querier": {
         "store": {
@@ -92,13 +76,13 @@
             "totalPageDownloadTime": 0
           }
         },
-        "querierExecTime": 0.019072
+        "querierExecTime": 0.010455
       },
       "ingester": {
         "totalReached": 2,
-        "totalChunksMatched": 6,
+        "totalChunksMatched": 4,
         "totalBatches": 4,
-        "totalLinesSent": 6,
+        "totalLinesSent": 2,
         "store": {
           "totalChunksRef": 0,
           "totalChunksDownloaded": 0,
@@ -106,17 +90,17 @@
           "queryReferencedStructuredMetadata": false,
           "queryUsedV2Engine": false,
           "chunk": {
-            "headChunkBytes": 25255,
-            "headChunkLines": 271,
+            "headChunkBytes": 16998,
+            "headChunkLines": 190,
             "decompressedBytes": 0,
             "decompressedLines": 0,
             "compressedBytes": 0,
             "totalDuplicates": 0,
-            "postFilterLines": 6,
-            "headChunkStructuredMetadataBytes": 2168,
+            "postFilterLines": 2,
+            "headChunkStructuredMetadataBytes": 1520,
             "decompressedStructuredMetadataBytes": 0
           },
-          "chunkRefsFetchTime": 480168,
+          "chunkRefsFetchTime": 510211,
           "congestionControlLatency": 0,
           "pipelineWrapperFilteredLines": 0,
           "dataobj": {
@@ -135,7 +119,7 @@
             "totalPageDownloadTime": 0
           }
         },
-        "recvWaitTime": 0.005257
+        "recvWaitTime": 0.002438
       },
       "cache": {
         "chunk": {
@@ -170,12 +154,12 @@
         },
         "statsResult": {
           "entriesFound": 0,
-          "entriesRequested": 1,
-          "entriesStored": 1,
+          "entriesRequested": 0,
+          "entriesStored": 0,
           "bytesReceived": 0,
           "bytesSent": 0,
-          "requests": 2,
-          "downloadTime": 17135,
+          "requests": 0,
+          "downloadTime": 0,
           "queryLengthServed": 0
         },
         "volumeResult": {

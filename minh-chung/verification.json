@@ -1,5 +1,5 @@
 {
-  "time": "2026-10-23T17:17:31.987967+07:00",
+  "time": "2026-10-24T00:00:41.703449+07:00",
   "passed": 51,
   "total": 51,
   "results": [
@@ -67,7 +67,7 @@
     {
       "test": "Tạo công thức",
       "passed": true,
-      "evidence": "Bản ghi tạm ID 11"
+      "evidence": "Bản ghi tạm ID 13"
     },
     {
       "test": "Sửa công thức",
@@ -144,14 +144,14 @@
       "test": "Metrics count(container_cpu_usage_seconds_total{container_label_com_docker_compose_project=\"recipe\"})",
       "passed": true,
       "evidence": [
-        "18"
+        "11"
       ]
     },
     {
       "test": "Metrics count(container_memory_working_set_bytes{container_label_com_docker_compose_project=\"recipe\"})",
       "passed": true,
       "evidence": [
-        "18"
+        "11"
       ]
     },
     {
@@ -173,28 +173,32 @@
       "test": "LogQL {job=\"nginx\"}",
       "passed": true,
       "evidence": {
-        "rows": 20
+        "rows": 20,
+        "lookback_seconds": 3600
       }
     },
     {
       "test": "LogQL {job=\"nginx\"} | json | status >= 400",
       "passed": true,
       "evidence": {
-        "rows": 20
+        "rows": 8,
+        "lookback_seconds": 3600
       }
     },
     {
       "test": "LogQL {job=\"app\"} |= \"login_success\"",
       "passed": true,
       "evidence": {
-        "rows": 6
+        "rows": 2,
+        "lookback_seconds": 3600
       }
     },
     {
       "test": "LogQL {job=\"mysql\"}",
       "passed": true,
       "evidence": {
-        "rows": 19
+        "rows": 19,
+        "lookback_seconds": 604800
       }
     },
     {

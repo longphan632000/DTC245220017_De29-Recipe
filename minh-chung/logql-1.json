@@ -14,102 +14,102 @@
         },
         "values": [
           [
-            "1792750648761707934",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
+            "1792774837826314177",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
           ],
           [
-            "1792750648761665319",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":3925,\"request_time\":0.008,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837825351321",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":3925,\"request_time\":0.012,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761653452",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":3763,\"request_time\":0.006,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823954090",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":3763,\"request_time\":0.009,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761639958",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2607,\"request_time\":0.007,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823871434",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2607,\"request_time\":0.010,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761361260",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2060,\"request_time\":0.004,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823820159",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2060,\"request_time\":0.009,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761331533",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.011,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823732166",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.022,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761325538",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2427,\"request_time\":0.006,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823680734",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2427,\"request_time\":0.008,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761322023",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.005,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823572503",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.013,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761270202",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":4693,\"request_time\":0.006,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823548378",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":4693,\"request_time\":0.009,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761259446",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.011,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823525717",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.019,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761249978",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":5156,\"request_time\":0.005,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823487374",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":5156,\"request_time\":0.008,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761240562",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2607,\"request_time\":0.008,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823400780",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":2607,\"request_time\":0.017,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648761235789",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":5215,\"request_time\":0.005,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823377121",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":5215,\"request_time\":0.010,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648510047576",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.020,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823368454",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.032,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648259301856",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":5207,\"request_time\":0.005,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774836819191909",
+            "{\"time\":\"2026-10-23T17:00:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":5207,\"request_time\":0.010,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648259292068",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.013,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774836819112795",
+            "{\"time\":\"2026-10-23T17:00:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.047,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648259279362",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":4693,\"request_time\":0.004,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774836819098320",
+            "{\"time\":\"2026-10-23T17:00:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":4693,\"request_time\":0.014,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648259273373",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.107,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774836819091557",
+            "{\"time\":\"2026-10-23T17:00:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":302,\"bytes\":0,\"request_time\":0.385,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648008517635",
-            "{\"time\":\"2026-10-23T10:17:27+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.107,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774836317146807",
+            "{\"time\":\"2026-10-23T17:00:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.378,\"upstream\":\"172.26.0.3:8080\"}"
           ],
           [
-            "1792750648008483037",
-            "{\"time\":\"2026-10-23T10:17:27+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":1839,\"request_time\":0.001,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774836062735834",
+            "{\"time\":\"2026-10-23T17:00:35+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":200,\"bytes\":1839,\"request_time\":0.003,\"upstream\":\"172.26.0.3:8080\"}"
           ]
         ]
       }
     ],
     "stats": {
       "summary": {
-        "bytesProcessedPerSecond": 661161,
-        "linesProcessedPerSecond": 3601,
-        "totalBytesProcessed": 12852,
-        "totalLinesProcessed": 70,
-        "execTime": 0.019439,
-        "queueTime": 0.000666,
+        "bytesProcessedPerSecond": 141286,
+        "linesProcessedPerSecond": 826,
+        "totalBytesProcessed": 4789,
+        "totalLinesProcessed": 28,
+        "execTime": 0.033896,
+        "queueTime": 0.000779,
         "subqueries": 0,
         "totalEntriesReturned": 20,
         "splits": 1,
         "shards": 1,
-        "totalPostFilterLines": 70,
-        "totalStructuredMetadataBytesProcessed": 560
+        "totalPostFilterLines": 28,
+        "totalStructuredMetadataBytesProcessed": 224
       },
       "querier": {
         "store": {
@@ -148,7 +148,7 @@
             "totalPageDownloadTime": 0
           }
         },
-        "querierExecTime": 0.01721
+        "querierExecTime": 0.053083
       },
       "ingester": {
         "totalReached": 1,
@@ -162,17 +162,17 @@
           "queryReferencedStructuredMetadata": false,
           "queryUsedV2Engine": false,
           "chunk": {
-            "headChunkBytes": 12852,
-            "headChunkLines": 70,
+            "headChunkBytes": 4789,
+            "headChunkLines": 28,
             "decompressedBytes": 0,
             "decompressedLines": 0,
             "compressedBytes": 0,
             "totalDuplicates": 0,
-            "postFilterLines": 70,
-            "headChunkStructuredMetadataBytes": 560,
+            "postFilterLines": 28,
+            "headChunkStructuredMetadataBytes": 224,
             "decompressedStructuredMetadataBytes": 0
           },
-          "chunkRefsFetchTime": 693568,
+          "chunkRefsFetchTime": 341821,
           "congestionControlLatency": 0,
           "pipelineWrapperFilteredLines": 0,
           "dataobj": {
@@ -191,7 +191,7 @@
             "totalPageDownloadTime": 0
           }
         },
-        "recvWaitTime": 0.002383
+        "recvWaitTime": 0.023869
       },
       "cache": {
         "chunk": {

@@ -139,10 +139,12 @@ status,_,_,body=request('http://127.0.0.1:3000/api/dashboards/uid/recipe-overvie
 check('Dashboard tự provision',status==200 and len(json.loads(body)['dashboard']['panels'])==10,'10 panel cho container, Nginx và MySQL')
 queries=['{job="nginx"}','{job="nginx"} | json | status >= 400','{job="app"} |= "login_success"','{job="mysql"}']
 for q in queries:
-    params={'query':q,'limit':20,'direction':'backward','start':str(int((datetime.datetime.now().timestamp()-3600)*1e9)),'end':str(int(datetime.datetime.now().timestamp()*1e9))}
+    # MySQL error logs can be quiet for hours while the database is healthy.
+    lookback_s=7*24*3600 if q=='{job="mysql"}' else 3600
+    params={'query':q,'limit':20,'direction':'backward','start':str(int((datetime.datetime.now().timestamp()-lookback_s)*1e9)),'end':str(int(datetime.datetime.now().timestamp()*1e9))}
     status,_,_,body=request('http://127.0.0.1:3100/loki/api/v1/query_range?'+urllib.parse.urlencode(params))
     j=json.loads(body);rows=sum(len(x['values']) for x in j.get('data',{}).get('result',[]))
-    check('LogQL '+q,status==200 and rows>0,{'rows':rows})
+    check('LogQL '+q,status==200 and rows>0,{'rows':rows,'lookback_seconds':lookback_s})
     (ROOT/'minh-chung').mkdir(exist_ok=True)
     (ROOT/'minh-chung'/('logql-'+str(queries.index(q)+1)+'.json')).write_text(json.dumps(j,ensure_ascii=False,indent=2)+'\n')
 ids=subprocess.run(['docker','compose','ps','-q'],capture_output=True,text=True,check=True).stdout.split()

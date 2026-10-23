@@ -16,14 +16,14 @@
           "service": "nginx",
           "service_name": "nginx",
           "status": "403",
-          "time": "2026-10-23T09:52:36+00:00",
+          "time": "2026-10-23T16:59:30+00:00",
           "upstream": "",
           "uri": "/.env"
         },
         "values": [
           [
-            "1792749156273205097",
-            "{\"time\":\"2026-10-23T09:52:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
+            "1792774770997283965",
+            "{\"time\":\"2026-10-23T16:59:30+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
           ]
         ]
       },
@@ -40,86 +40,14 @@
           "service": "nginx",
           "service_name": "nginx",
           "status": "403",
-          "time": "2026-10-23T09:53:32+00:00",
+          "time": "2026-10-23T17:00:37+00:00",
           "upstream": "",
           "uri": "/.env"
         },
         "values": [
           [
-            "1792749212231651806",
-            "{\"time\":\"2026-10-23T09:53:32+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "146",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.000",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T09:56:00+00:00",
-          "upstream": "",
-          "uri": "/.env"
-        },
-        "values": [
-          [
-            "1792749360206717836",
-            "{\"time\":\"2026-10-23T09:56:00+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "146",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.000",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T09:59:03+00:00",
-          "upstream": "",
-          "uri": "/.env"
-        },
-        "values": [
-          [
-            "1792749543814011862",
-            "{\"time\":\"2026-10-23T09:59:03+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "146",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.000",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T10:17:28+00:00",
-          "upstream": "",
-          "uri": "/.env"
-        },
-        "values": [
-          [
-            "1792750648761707934",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
+            "1792774837826314177",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/.env\",\"status\":403,\"bytes\":146,\"request_time\":0.000,\"upstream\":\"\"}"
           ]
         ]
       },
@@ -132,162 +60,42 @@
           "method": "GET",
           "project": "recipe",
           "remote_addr": "172.26.0.1",
-          "request_time": "0.004",
+          "request_time": "0.009",
           "service": "nginx",
           "service_name": "nginx",
           "status": "404",
-          "time": "2026-10-23T09:53:32+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749212230908211",
-            "{\"time\":\"2026-10-23T09:53:32+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.004,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1600",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.004",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "404",
-          "time": "2026-10-23T09:56:00+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749360206547579",
-            "{\"time\":\"2026-10-23T09:56:00+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.004,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1600",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.005",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "404",
-          "time": "2026-10-23T09:52:35+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749156022434785",
-            "{\"time\":\"2026-10-23T09:52:35+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.005,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1600",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.005",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "404",
-          "time": "2026-10-23T09:59:03+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749543813821088",
-            "{\"time\":\"2026-10-23T09:59:03+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.005,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1600",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "GET",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.005",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "404",
-          "time": "2026-10-23T10:17:28+00:00",
+          "time": "2026-10-23T16:59:30+00:00",
           "upstream": "172.26.0.3:8080",
           "uri": "/"
         },
         "values": [
           [
-            "1792750648761322023",
-            "{\"time\":\"2026-10-23T10:17:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.005,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774770744198226",
+            "{\"time\":\"2026-10-23T16:59:30+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.009,\"upstream\":\"172.26.0.3:8080\"}"
           ]
         ]
       },
       {
         "stream": {
-          "bytes": "1929",
+          "bytes": "1600",
           "detected_level": "unknown",
           "filename": "/logs/nginx/access.log",
           "job": "nginx",
-          "method": "POST",
+          "method": "GET",
           "project": "recipe",
           "remote_addr": "172.26.0.1",
-          "request_time": "0.083",
+          "request_time": "0.013",
           "service": "nginx",
           "service_name": "nginx",
-          "status": "401",
-          "time": "2026-10-23T09:53:31+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749211728550161",
-            "{\"time\":\"2026-10-23T09:53:31+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.083,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1929",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.107",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "401",
-          "time": "2026-10-23T10:17:27+00:00",
+          "status": "404",
+          "time": "2026-10-23T17:00:37+00:00",
           "upstream": "172.26.0.3:8080",
           "uri": "/"
         },
         "values": [
           [
-            "1792750648008517635",
-            "{\"time\":\"2026-10-23T10:17:27+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.107,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774837823572503",
+            "{\"time\":\"2026-10-23T17:00:37+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"GET\",\"uri\":\"/\",\"status\":404,\"bytes\":1600,\"request_time\":0.013,\"upstream\":\"172.26.0.3:8080\"}"
           ]
         ]
       },
@@ -300,162 +108,42 @@
           "method": "POST",
           "project": "recipe",
           "remote_addr": "172.26.0.1",
-          "request_time": "0.110",
+          "request_time": "0.185",
           "service": "nginx",
           "service_name": "nginx",
           "status": "401",
-          "time": "2026-10-23T09:55:59+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749359705324536",
-            "{\"time\":\"2026-10-23T09:55:59+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.110,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1929",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.182",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "401",
-          "time": "2026-10-23T09:59:02+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749542807466716",
-            "{\"time\":\"2026-10-23T09:59:02+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.182,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "1929",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.220",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "401",
-          "time": "2026-10-23T09:52:34+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749155018607954",
-            "{\"time\":\"2026-10-23T09:52:34+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.220,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "69",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.001",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T09:53:31+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749211728369022",
-            "{\"time\":\"2026-10-23T09:53:31+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.001,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "69",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.002",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T09:55:59+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749359705316672",
-            "{\"time\":\"2026-10-23T09:55:59+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.002,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "69",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.003",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T09:59:02+00:00",
-          "upstream": "172.26.0.2:8080",
-          "uri": "/"
-        },
-        "values": [
-          [
-            "1792749542552788990",
-            "{\"time\":\"2026-10-23T09:59:02+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.003,\"upstream\":\"172.26.0.2:8080\"}"
-          ]
-        ]
-      },
-      {
-        "stream": {
-          "bytes": "69",
-          "detected_level": "unknown",
-          "filename": "/logs/nginx/access.log",
-          "job": "nginx",
-          "method": "POST",
-          "project": "recipe",
-          "remote_addr": "172.26.0.1",
-          "request_time": "0.003",
-          "service": "nginx",
-          "service_name": "nginx",
-          "status": "403",
-          "time": "2026-10-23T10:17:27+00:00",
+          "time": "2026-10-23T16:59:28+00:00",
           "upstream": "172.26.0.3:8080",
           "uri": "/"
         },
         "values": [
           [
-            "1792750648008449545",
-            "{\"time\":\"2026-10-23T10:17:27+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.003,\"upstream\":\"172.26.0.3:8080\"}"
+            "1792774768125500371",
+            "{\"time\":\"2026-10-23T16:59:28+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.185,\"upstream\":\"172.26.0.3:8080\"}"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "bytes": "1929",
+          "detected_level": "unknown",
+          "filename": "/logs/nginx/access.log",
+          "job": "nginx",
+          "method": "POST",
+          "project": "recipe",
+          "remote_addr": "172.26.0.1",
+          "request_time": "0.378",
+          "service": "nginx",
+          "service_name": "nginx",
+          "status": "401",
+          "time": "2026-10-23T17:00:36+00:00",
+          "upstream": "172.26.0.3:8080",
+          "uri": "/"
+        },
+        "values": [
+          [
+            "1792774836317146807",
+            "{\"time\":\"2026-10-23T17:00:36+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":401,\"bytes\":1929,\"request_time\":0.378,\"upstream\":\"172.26.0.3:8080\"}"
           ]
         ]
       },
@@ -468,36 +156,60 @@
           "method": "POST",
           "project": "recipe",
           "remote_addr": "172.26.0.1",
-          "request_time": "0.015",
+          "request_time": "0.007",
           "service": "nginx",
           "service_name": "nginx",
           "status": "403",
-          "time": "2026-10-23T09:52:34+00:00",
-          "upstream": "172.26.0.2:8080",
+          "time": "2026-10-23T17:00:35+00:00",
+          "upstream": "172.26.0.3:8080",
           "uri": "/"
         },
         "values": [
           [
-            "1792749154768484038",
-            "{\"time\":\"2026-10-23T09:52:34+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.015,\"upstream\":\"172.26.0.2:8080\"}"
+            "1792774836062729819",
+            "{\"time\":\"2026-10-23T17:00:35+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.007,\"upstream\":\"172.26.0.3:8080\"}"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "bytes": "69",
+          "detected_level": "unknown",
+          "filename": "/logs/nginx/access.log",
+          "job": "nginx",
+          "method": "POST",
+          "project": "recipe",
+          "remote_addr": "172.26.0.1",
+          "request_time": "0.042",
+          "service": "nginx",
+          "service_name": "nginx",
+          "status": "403",
+          "time": "2026-10-23T16:59:27+00:00",
+          "upstream": "172.26.0.3:8080",
+          "uri": "/"
+        },
+        "values": [
+          [
+            "1792774768124952872",
+            "{\"time\":\"2026-10-23T16:59:27+00:00\",\"remote_addr\":\"172.26.0.1\",\"method\":\"POST\",\"uri\":\"/\",\"status\":403,\"bytes\":69,\"request_time\":0.042,\"upstream\":\"172.26.0.3:8080\"}"
           ]
         ]
       }
     ],
     "stats": {
       "summary": {
-        "bytesProcessedPerSecond": 1182907,
-        "linesProcessedPerSecond": 6684,
-        "totalBytesProcessed": 38576,
-        "totalLinesProcessed": 218,
-        "execTime": 0.032611,
-        "queueTime": 0.001942,
+        "bytesProcessedPerSecond": 1192585,
+        "linesProcessedPerSecond": 6951,
+        "totalBytesProcessed": 10636,
+        "totalLinesProcessed": 62,
+        "execTime": 0.008918,
+        "queueTime": 0.000493,
         "subqueries": 0,
-        "totalEntriesReturned": 20,
+        "totalEntriesReturned": 8,
         "splits": 2,
         "shards": 2,
-        "totalPostFilterLines": 21,
-        "totalStructuredMetadataBytesProcessed": 1744
+        "totalPostFilterLines": 8,
+        "totalStructuredMetadataBytesProcessed": 496
       },
       "querier": {
         "store": {
@@ -536,13 +248,13 @@
             "totalPageDownloadTime": 0
           }
         },
-        "querierExecTime": 0.023421
+        "querierExecTime": 0.013524
       },
       "ingester": {
         "totalReached": 2,
         "totalChunksMatched": 2,
         "totalBatches": 4,
-        "totalLinesSent": 21,
+        "totalLinesSent": 8,
         "store": {
           "totalChunksRef": 0,
           "totalChunksDownloaded": 0,
@@ -550,17 +262,17 @@
           "queryReferencedStructuredMetadata": false,
           "queryUsedV2Engine": false,
           "chunk": {
-            "headChunkBytes": 38576,
-            "headChunkLines": 218,
+            "headChunkBytes": 10636,
+            "headChunkLines": 62,
             "decompressedBytes": 0,
             "decompressedLines": 0,
             "compressedBytes": 0,
             "totalDuplicates": 0,
-            "postFilterLines": 21,
-            "headChunkStructuredMetadataBytes": 1744,
+            "postFilterLines": 8,
+            "headChunkStructuredMetadataBytes": 496,
             "decompressedStructuredMetadataBytes": 0
           },
-          "chunkRefsFetchTime": 1826441,
+          "chunkRefsFetchTime": 445583,
           "congestionControlLatency": 0,
           "pipelineWrapperFilteredLines": 0,
           "dataobj": {
@@ -579,7 +291,7 @@
             "totalPageDownloadTime": 0
           }
         },
-        "recvWaitTime": 0.00689
+        "recvWaitTime": 0.003666
       },
       "cache": {
         "chunk": {
@@ -614,12 +326,12 @@
         },
         "statsResult": {
           "entriesFound": 0,
-          "entriesRequested": 1,
-          "entriesStored": 1,
+          "entriesRequested": 0,
+          "entriesStored": 0,
           "bytesReceived": 0,
           "bytesSent": 0,
-          "requests": 2,
-          "downloadTime": 16381,
+          "requests": 0,
+          "downloadTime": 0,
           "queryLengthServed": 0
         },
         "volumeResult": {

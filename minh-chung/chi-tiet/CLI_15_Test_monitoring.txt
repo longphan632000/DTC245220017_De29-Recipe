@@ -1,0 +1,18 @@
+THOI DIEM 2026-10-24T00:15:18+07:00
+LENH python3 scripts/verify.py; trích từ verification.json
+EXIT 0
+
+PASS Prometheus targets
+PASS Metrics mysql_up
+PASS Metrics nginx_up
+PASS Metrics count(container_cpu_usage_seconds_total{container_label_com_docker_compose_project="recipe"})
+PASS Metrics count(container_memory_working_set_bytes{container_label_com_docker_compose_project="recipe"})
+PASS Grafana datasource prometheus
+PASS Grafana datasource loki
+PASS Dashboard tự provision
+PASS LogQL {job="nginx"}
+PASS LogQL {job="nginx"} | json | status >= 400
+PASS LogQL {job="app"} |= "login_success"
+PASS LogQL {job="mysql"}
+Kết quả toàn bộ: 51/51
+Thời điểm kiểm thử: 2026-10-24T00:00:41.703449+07:00
