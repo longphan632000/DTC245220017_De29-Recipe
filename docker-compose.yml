@@ -72,7 +72,7 @@ services:
     ports: ["127.0.0.1:8088:8080", "127.0.0.1:8081:8081"]
     volumes: ["nginx_logs:/var/log/recipe"]
     tmpfs: ["/tmp:uid=101,gid=101,mode=1777"]
-    networks: [web_net]
+    networks: [web_net, monitoring_net]
     depends_on: [app, phpmyadmin]
     mem_limit: 64m
     healthcheck:
@@ -81,11 +81,78 @@ services:
       timeout: 5s
       retries: 5
 
+  prometheus:
+    <<: *defaults
+    image: prom/prometheus@sha256:5ce7540c3c00ef4ab0c9d2c995c6a5b9c421f44b4a115d97a2c7af3b1c21cbb0
+    user: "65534:65534"
+    read_only: true
+    command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=7d", "--storage.tsdb.retention.size=512MB"]
+    ports: ["127.0.0.1:9090:9090"]
+    volumes: ["./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro", "./prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro", "prometheus_data:/prometheus"]
+    tmpfs: ["/tmp:uid=65534,gid=65534,mode=1777"]
+    networks: [monitoring_net, management_net]
+    mem_limit: 256m
+  grafana:
+    <<: *defaults
+    image: grafana/grafana@sha256:ac461fb352abc50da10a51c7d02462e9c05488f11f53f14b3ad79a8145f638a0
+    user: "472:472"
+    read_only: true
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:-recipe_admin}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?run scripts/setup.py}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_AUTH_ANONYMOUS_ENABLED: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
+      GF_SECURITY_DISABLE_GRAVATAR: "true"
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/recipe-overview.json
+    ports: ["127.0.0.1:3000:3000"]
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    tmpfs: ["/tmp:uid=472,gid=472,mode=1777"]
+    networks: [monitoring_net, management_net]
+    depends_on: [prometheus]
+    mem_limit: 384m
+  cadvisor:
+    <<: *defaults
+    image: gcr.io/cadvisor/cadvisor@sha256:3de2bd5203120b866d74a9b283b2ffb8ec382fbf9dc321814700c6ea6f44ec57
+    read_only: true
+    command: ["--docker_only=true", "--housekeeping_interval=15s", "--store_container_labels=false", "--whitelisted_container_labels=com.docker.compose.project,com.docker.compose.service", "--enable_metrics=cpu,memory,network", "--max_procs=1"]
+    volumes: ["/:/rootfs:ro", "/sys:/sys:ro", "/var/run/docker.sock:/var/run/docker.sock:ro", "/run/containerd/containerd.sock:/run/containerd/containerd.sock:ro", "/var/lib/docker:/var/lib/docker:ro"]
+    tmpfs: ["/tmp:mode=1777"]
+    networks: [monitoring_net]
+    mem_limit: 256m
+  nginx-exporter:
+    <<: *defaults
+    image: nginx/nginx-prometheus-exporter@sha256:9f6d963bb2b19d706d401cc3e2c3ea8de2f1c471b96a2156ca45e76f650b1625
+    user: "65534:65534"
+    read_only: true
+    command: ["--nginx.scrape-uri=http://nginx:8090/stub_status"]
+    networks: [monitoring_net]
+    depends_on: [nginx]
+    mem_limit: 48m
+  mysql-exporter:
+    <<: *defaults
+    image: prom/mysqld-exporter@sha256:abed8dac117b4ae5b70757f988e44795935b9a72c3b58d720c67ba688f8cb79e
+    user: "65534:65534"
+    read_only: true
+    environment: {MYSQLD_EXPORTER_PASSWORD: "${MYSQL_EXPORTER_PASSWORD:?run scripts/setup.py}"}
+    command: ["--config.my-cnf=/dev/null", "--mysqld.address=db:3306", "--mysqld.username=recipe_exporter"]
+    networks: [db_net, monitoring_net]
+    depends_on: {db: {condition: service_healthy}}
+    mem_limit: 48m
+
 volumes:
   mysql_data:
   nginx_logs:
   app_logs:
+  prometheus_data:
+  grafana_data:
 
 networks:
   web_net: {driver: bridge}
   db_net: {driver: bridge, internal: true}
+  monitoring_net: {driver: bridge, internal: true}
+  management_net: {driver: bridge}

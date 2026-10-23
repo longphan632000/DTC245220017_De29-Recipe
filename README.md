@@ -24,6 +24,8 @@ Script tạo `.env` với mật khẩu ngẫu nhiên, build ứng dụng, tạo 
 | Quản trị Recipe | http://127.0.0.1:8088/?page=login |
 | phpMyAdmin qua Nginx | http://127.0.0.1:8081 |
 | MySQL | Mạng nội bộ `db_net`, không publish cổng |
+| Grafana | http://127.0.0.1:3000 |
+| Prometheus | http://127.0.0.1:9090 |
 
 Tài khoản ứng dụng dùng `APP_ADMIN_USER`, `APP_ADMIN_PASSWORD`. phpMyAdmin dùng `MYSQL_USER`, `MYSQL_PASSWORD`. Tất cả bí mật chỉ lưu trong `.env`, quyền `600`, không commit lên GitHub.
 
@@ -43,3 +45,16 @@ docker compose up -d
 ```
 
 Không dùng `down -v` khi cần giữ dữ liệu.
+
+## Giám sát
+
+Prometheus scrape mỗi 15 giây từ cAdvisor, Nginx Exporter và MySQL Exporter. Grafana tự nhận datasource và dashboard **Recipe — Containers • Nginx • MySQL**, có CPU/RAM/mạng theo container, yêu cầu và kết nối Nginx, trạng thái và truy vấn MySQL. Đăng nhập bằng `GRAFANA_ADMIN_USER`, `GRAFANA_ADMIN_PASSWORD` trong `.env`.
+
+```promql
+up
+mysql_up
+nginx_up
+sum by (container_label_com_docker_compose_service) (rate(container_cpu_usage_seconds_total{container_label_com_docker_compose_project="recipe"}[2m])) * 100
+```
+
+cAdvisor là ngoại lệ chạy root để đọc cgroups và metadata Docker/containerd. Các mount host đặt chỉ đọc, không bật privileged và không publish cổng cAdvisor. Socket Unix gắn `:ro` vẫn có khả năng gọi API runtime; chỉ sử dụng collector đáng tin cậy trên máy lab. Database, ứng dụng và các dịch vụ thông thường chạy non-root.

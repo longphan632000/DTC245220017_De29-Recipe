@@ -1,0 +1,18 @@
+groups:
+  - name: recipe-health
+    rules:
+      - alert: RecipeTargetDown
+        expr: up == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Prometheus không truy cập được target {{ $labels.job }}"}
+      - alert: RecipeMySQLDown
+        expr: mysql_up == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "MySQL exporter không kết nối được database"}
+      - alert: RecipeNginxDown
+        expr: nginx_up == 0
+        for: 1m
+        labels: {severity: critical}
+        annotations: {summary: "Nginx exporter không lấy được stub_status"}

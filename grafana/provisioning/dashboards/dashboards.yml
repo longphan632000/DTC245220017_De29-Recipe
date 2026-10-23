@@ -1,0 +1,9 @@
+apiVersion: 1
+providers:
+  - name: Recipe
+    orgId: 1
+    folder: Recipe
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 10
+    options: {path: /var/lib/grafana/dashboards}
