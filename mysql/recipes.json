@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "title": "Phở gà thơm vị nhà",
+    "category": 1,
+    "description": "Nước dùng trong ngọt, thịt gà mềm và hương rau thơm cho buổi sáng ấm bụng.",
+    "prep": 20,
+    "cook": 50,
+    "servings": 4,
+    "difficulty": "Vừa",
+    "image": "pho",
+    "ingredients": [
+      "1 con gà khoảng 1,2 kg",
+      "600 g bánh phở",
+      "1 củ hành tây, 1 nhánh gừng",
+      "2 hoa hồi, 1 thanh quế nhỏ",
+      "Hành lá, rau mùi và chanh",
+      "Muối, nước mắm theo khẩu vị"
+    ],
+    "steps": [
+      "Rửa sạch gà, để ráo. Hành tây và gừng nướng sơ rồi làm sạch phần cháy.",
+      "Cho gà vào nồi, đổ nước ngập và đun sôi nhẹ. Hớt bọt, thêm hành gừng, hồi và quế.",
+      "Luộc và kiểm tra phần thịt dày nhất đã chín hoàn toàn. Vớt gà ra, để nguội bớt rồi xé thịt.",
+      "Nêm nước dùng bằng muối và nước mắm. Trụng bánh phở theo hướng dẫn trên bao bì.",
+      "Xếp phở, thịt gà và rau vào bát. Chan nước dùng nóng, thêm chanh tùy khẩu vị."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Bánh mì gà xé",
+    "category": 2,
+    "description": "Ổ bánh giòn, gà xé đậm đà cùng dưa leo và rau mùi tươi mát.",
+    "prep": 15,
+    "cook": 15,
+    "servings": 2,
+    "difficulty": "Dễ",
+    "image": "banh-mi",
+    "ingredients": [
+      "2 ổ bánh mì",
+      "250 g thịt ức gà đã nấu chín",
+      "1 quả dưa leo",
+      "1 củ cà rốt nhỏ",
+      "Rau mùi và ớt tùy chọn",
+      "1 thìa nước tương, 1 thìa dầu ăn"
+    ],
+    "steps": [
+      "Xé thịt gà đã chín thành sợi vừa ăn. Dưa leo thái lát, cà rốt bào sợi.",
+      "Đảo gà với dầu ăn và nước tương trong 3–5 phút đến khi nóng đều.",
+      "Làm nóng bánh mì trong lò hoặc chảo khô cho vỏ giòn.",
+      "Rạch bánh, xếp gà và rau vào trong. Dùng ngay khi còn nóng."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cơm rang rau củ",
+    "category": 2,
+    "description": "Cơm tơi hạt, trứng vàng và rau củ nhiều màu cho bữa ăn nhanh đủ vị.",
+    "prep": 10,
+    "cook": 15,
+    "servings": 2,
+    "difficulty": "Dễ",
+    "image": "com-rang",
+    "ingredients": [
+      "2 bát cơm nguội bảo quản lạnh đúng cách",
+      "2 quả trứng",
+      "100 g đậu Hà Lan và cà rốt",
+      "2 nhánh hành lá",
+      "1 thìa nước tương",
+      "2 thìa dầu ăn"
+    ],
+    "steps": [
+      "Cà rốt thái hạt lựu, hành lá thái nhỏ. Đánh tan trứng.",
+      "Làm nóng chảo với dầu, đảo trứng đến khi vừa chín rồi thêm rau củ.",
+      "Cho cơm vào, đảo tơi và nêm nước tương. Rang đến khi cơm nóng đều hoàn toàn.",
+      "Thêm hành lá, đảo nhanh rồi tắt bếp và dùng ngay."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Canh chua cá thanh mát",
+    "category": 1,
+    "description": "Vị chua dịu của me, ngọt của cá và rau thơm cho bữa cơm gia đình.",
+    "prep": 20,
+    "cook": 25,
+    "servings": 4,
+    "difficulty": "Vừa",
+    "image": "canh-chua",
+    "ingredients": [
+      "500 g cá đã làm sạch",
+      "2 quả cà chua",
+      "150 g dứa",
+      "100 g đậu bắp",
+      "1 thìa me chín",
+      "Rau ngổ, hành và nước mắm"
+    ],
+    "steps": [
+      "Cá cắt khúc, cà chua bổ múi, dứa cắt lát và đậu bắp cắt vừa ăn.",
+      "Ngâm me với nước nóng rồi lọc bỏ hạt. Đun sôi khoảng 1,2 lít nước.",
+      "Thả cá vào, hớt bọt và nấu đến khi cá chín hoàn toàn.",
+      "Cho cà chua, dứa, nước me và đậu bắp vào nấu thêm vài phút.",
+      "Nêm nước mắm theo khẩu vị, thêm rau thơm rồi tắt bếp."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Salad vườn nhà",
+    "category": 3,
+    "description": "Rau xanh giòn mát, cà chua và sốt chanh nhẹ nhàng cho một ngày tươi mới.",
+    "prep": 15,
+    "cook": 0,
+    "servings": 2,
+    "difficulty": "Dễ",
+    "image": "salad",
+    "ingredients": [
+      "150 g xà lách",
+      "150 g cà chua bi",
+      "1 quả dưa leo",
+      "1 thìa nước cốt chanh",
+      "2 thìa dầu ô liu",
+      "Muối và tiêu theo khẩu vị"
+    ],
+    "steps": [
+      "Rửa sạch rau bằng nước sạch, để ráo. Thái dưa leo và bổ đôi cà chua.",
+      "Khuấy nước chanh với dầu ô liu, một ít muối và tiêu.",
+      "Trộn rau với sốt ngay trước khi ăn để giữ độ giòn.",
+      "Bày ra đĩa và dùng cùng món chính hoặc bánh mì."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Chè đậu xanh cốt dừa",
+    "category": 4,
+    "description": "Đậu xanh bùi mềm, nước cốt dừa béo nhẹ và vị ngọt vừa đủ.",
+    "prep": 15,
+    "cook": 35,
+    "servings": 4,
+    "difficulty": "Dễ",
+    "image": "che",
+    "ingredients": [
+      "200 g đậu xanh cà vỏ",
+      "150 ml nước cốt dừa",
+      "70 g đường hoặc tùy khẩu vị",
+      "1 thìa bột năng",
+      "1 nhúm muối",
+      "800 ml nước"
+    ],
+    "steps": [
+      "Rửa đậu xanh, ngâm khoảng 2 giờ rồi để ráo. Thời gian ngâm chưa tính vào sơ chế.",
+      "Cho đậu và nước vào nồi, nấu lửa vừa đến khi đậu chín mềm.",
+      "Thêm đường và muối, khuấy nhẹ. Hòa bột năng với nước nguội rồi rót từ từ vào chè.",
+      "Đun nước cốt dừa riêng cho nóng, không để sôi quá lâu.",
+      "Múc chè ra bát, thêm nước cốt dừa. Bảo quản lạnh phần chưa dùng sau khi nguội."
+    ]
+  }
+]

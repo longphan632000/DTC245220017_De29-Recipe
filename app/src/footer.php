@@ -1,0 +1,1 @@
+</main><footer><div class="shell footer-inner"><div><a class="brand" href="/">recipe<span class="brand-dot">.</span></a><p>Ghi lại vị ngon. Chia sẻ niềm vui.</p></div><div><span>Căn bếp nhỏ, hương vị lớn.</span><small>Đề 29 · Website Công thức Nấu ăn<br>Docker Compose · PHP · MySQL</small></div></div></footer></body></html>

@@ -1,0 +1,9 @@
+.git
+.env
+.env.*
+secrets
+minh-chung
+docs
+tmp
+runtime
+__pycache__
