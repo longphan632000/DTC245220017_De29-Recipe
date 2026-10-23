@@ -27,10 +27,11 @@ def main():
         'MYSQL_ROOT_PASSWORD': secrets.token_urlsafe(24), 'MYSQL_DATABASE': 'recipe_db',
         'MYSQL_USER': 'recipe_user', 'MYSQL_PASSWORD': secrets.token_urlsafe(24),
         'MYSQL_EXPORTER_PASSWORD': secrets.token_urlsafe(24),
+        'PMA_BLOWFISH_SECRET': secrets.token_hex(16),
         'APP_ADMIN_USER': vals.get('WP_ADMIN_USER','recipe_admin'),
         'APP_ADMIN_PASSWORD': vals.get('WP_ADMIN_PASSWORD',secrets.token_urlsafe(24)),
         'GRAFANA_ADMIN_USER': 'recipe_admin', 'GRAFANA_ADMIN_PASSWORD': secrets.token_urlsafe(24),
-        'APP_URL': 'http://127.0.0.1:8088',
+        'APP_URL': 'http://127.0.0.1:'+os.environ.get('APP_HTTP_PORT','8088'),
     }
     changed = not (ROOT/'.env').exists()
     for key, value in defaults.items():
@@ -41,6 +42,15 @@ def main():
         with os.fdopen(fd,'w') as f:
             for k,v in vals.items(): f.write(k+'='+json.dumps(v,ensure_ascii=False)+'\n')
     os.chmod(ROOT/'.env', 0o600)
+    secret_dir=ROOT/'secrets'
+    secret_dir.mkdir(mode=0o700,exist_ok=True)
+    os.chmod(secret_dir,0o700)
+    if not re.fullmatch(r'[A-Za-z0-9_-]{32,64}',vals['PMA_BLOWFISH_SECRET']):
+        raise SystemExit('PMA_BLOWFISH_SECRET must contain 32–64 safe characters')
+    secret_file=secret_dir/'phpmyadmin-secret.php'
+    if secret_file.exists():os.chmod(secret_file,0o600)
+    secret_file.write_text("<?php\n$cfg['blowfish_secret'] = '"+vals['PMA_BLOWFISH_SECRET']+"';\n")
+    os.chmod(secret_file,0o444)
     for key in ['MYSQL_DATABASE','MYSQL_USER']:
         if not re.fullmatch(r'[A-Za-z0-9_]+',vals[key]): raise SystemExit('Invalid database identifier')
     for key in ['MYSQL_ROOT_PASSWORD','MYSQL_PASSWORD','MYSQL_EXPORTER_PASSWORD','APP_ADMIN_PASSWORD','GRAFANA_ADMIN_PASSWORD']:

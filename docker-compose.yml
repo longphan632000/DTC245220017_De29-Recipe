@@ -11,7 +11,8 @@ x-defaults: &defaults
 services:
   db:
     <<: *defaults
-    image: mysql@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b
+    build: {context: ., dockerfile: docker/mysql/Dockerfile}
+    image: recipe-mysql:local
     user: "999:999"
     read_only: true
     environment:
@@ -19,8 +20,8 @@ services:
       MYSQL_DATABASE: ${MYSQL_DATABASE:-recipe_db}
       MYSQL_USER: ${MYSQL_USER:-recipe_user}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD:?run scripts/setup.py}
-    command: ["--innodb-buffer-pool-size=128M", "--max-connections=80", "--skip-name-resolve"]
-    volumes: ["mysql_data:/var/lib/mysql"]
+    command: ["--innodb-buffer-pool-size=128M", "--max-connections=80", "--skip-name-resolve", "--log-error=/var/log/recipe/mysql-error.log"]
+    volumes: ["mysql_data:/var/lib/mysql", "mysql_logs:/var/log/recipe"]
     tmpfs: ["/tmp:uid=999,gid=999,mode=1777", "/var/run/mysqld:uid=999,gid=999,mode=0750"]
     networks: [db_net]
     mem_limit: 768m
@@ -58,7 +59,8 @@ services:
     image: recipe-phpmyadmin:local
     user: "33:33"
     read_only: true
-    environment: {PMA_HOST: db, PMA_PORT: 3306, PMA_ABSOLUTE_URI: "http://127.0.0.1:8081/"}
+    environment: {PMA_HOST: db, PMA_PORT: 3306, PMA_ABSOLUTE_URI: "http://127.0.0.1:${PMA_HTTP_PORT:-8081}/"}
+    volumes: ["./secrets/phpmyadmin-secret.php:/etc/phpmyadmin/config.secret.inc.php:ro"]
     tmpfs: ["/tmp:uid=33,gid=33,mode=1777", "/sessions:uid=33,gid=33,mode=0700", "/var/run/apache2:uid=33,gid=33,mode=0750", "/var/lock/apache2:uid=33,gid=33,mode=0750"]
     networks: [web_net, db_net]
     depends_on: {db: {condition: service_healthy}}
@@ -69,7 +71,7 @@ services:
     image: recipe-nginx:local
     user: "101:101"
     read_only: true
-    ports: ["127.0.0.1:8088:8080", "127.0.0.1:8081:8081"]
+    ports: ["127.0.0.1:${APP_HTTP_PORT:-8088}:8080", "127.0.0.1:${PMA_HTTP_PORT:-8081}:8081"]
     volumes: ["nginx_logs:/var/log/recipe"]
     tmpfs: ["/tmp:uid=101,gid=101,mode=1777"]
     networks: [web_net, monitoring_net]
@@ -87,7 +89,7 @@ services:
     user: "65534:65534"
     read_only: true
     command: ["--config.file=/etc/prometheus/prometheus.yml", "--storage.tsdb.path=/prometheus", "--storage.tsdb.retention.time=7d", "--storage.tsdb.retention.size=512MB"]
-    ports: ["127.0.0.1:9090:9090"]
+    ports: ["127.0.0.1:${PROMETHEUS_HTTP_PORT:-9090}:9090"]
     volumes: ["./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro", "./prometheus/alerts.yml:/etc/prometheus/alerts.yml:ro", "prometheus_data:/prometheus"]
     tmpfs: ["/tmp:uid=65534,gid=65534,mode=1777"]
     networks: [monitoring_net, management_net]
@@ -105,8 +107,11 @@ services:
       GF_ANALYTICS_REPORTING_ENABLED: "false"
       GF_ANALYTICS_CHECK_FOR_UPDATES: "false"
       GF_SECURITY_DISABLE_GRAVATAR: "true"
+      GF_PLUGINS_PREINSTALL_DISABLED: "true"
+      GF_PLUGINS_PREINSTALL_AUTO_UPDATE: "false"
+      GF_PLUGINS_PLUGIN_ADMIN_ENABLED: "false"
       GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /var/lib/grafana/dashboards/recipe-overview.json
-    ports: ["127.0.0.1:3000:3000"]
+    ports: ["127.0.0.1:${GRAFANA_HTTP_PORT:-3000}:3000"]
     volumes:
       - grafana_data:/var/lib/grafana
       - ./grafana/provisioning:/etc/grafana/provisioning:ro
@@ -144,12 +149,46 @@ services:
     depends_on: {db: {condition: service_healthy}}
     mem_limit: 48m
 
+  loki:
+    <<: *defaults
+    build: {context: ., dockerfile: docker/loki/Dockerfile}
+    image: recipe-loki:local
+    user: "10001:10001"
+    read_only: true
+    command: ["-config.file=/etc/loki/loki-config.yml"]
+    ports: ["127.0.0.1:${LOKI_HTTP_PORT:-3100}:3100"]
+    volumes: ["./loki/loki-config.yml:/etc/loki/loki-config.yml:ro", "loki_data:/loki"]
+    tmpfs: ["/tmp:uid=10001,gid=10001,mode=1777"]
+    networks: [monitoring_net, management_net]
+    mem_limit: 256m
+  promtail:
+    <<: *defaults
+    build: {context: ., dockerfile: docker/promtail/Dockerfile}
+    image: recipe-promtail:local
+    user: "10001:10001"
+    group_add: ["999"]
+    read_only: true
+    command: ["-config.file=/etc/promtail/promtail-config.yml"]
+    volumes:
+      - ./promtail/promtail-config.yml:/etc/promtail/promtail-config.yml:ro
+      - promtail_data:/positions
+      - nginx_logs:/logs/nginx:ro
+      - app_logs:/logs/app:ro
+      - mysql_logs:/logs/mysql:ro
+    tmpfs: ["/tmp:uid=10001,gid=10001,mode=1777"]
+    networks: [monitoring_net]
+    depends_on: [loki]
+    mem_limit: 128m
+
 volumes:
   mysql_data:
   nginx_logs:
   app_logs:
   prometheus_data:
   grafana_data:
+  mysql_logs:
+  loki_data:
+  promtail_data:
 
 networks:
   web_net: {driver: bridge}

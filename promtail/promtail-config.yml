@@ -1,0 +1,21 @@
+server: {http_listen_port: 9080, grpc_listen_port: 0}
+positions: {filename: /positions/positions.yaml}
+clients:
+  - url: http://loki:3100/loki/api/v1/push
+scrape_configs:
+  - job_name: nginx-access
+    static_configs:
+      - targets: [localhost]
+        labels: {project: recipe, job: nginx, service: nginx, __path__: /logs/nginx/access.log}
+  - job_name: nginx-error
+    static_configs:
+      - targets: [localhost]
+        labels: {project: recipe, job: nginx_error, service: nginx, __path__: /logs/nginx/error.log}
+  - job_name: app
+    static_configs:
+      - targets: [localhost]
+        labels: {project: recipe, job: app, service: app, __path__: /logs/app/*.log}
+  - job_name: mysql
+    static_configs:
+      - targets: [localhost]
+        labels: {project: recipe, job: mysql, service: db, __path__: /logs/mysql/*.log}
