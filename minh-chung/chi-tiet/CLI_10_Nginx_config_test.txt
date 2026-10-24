@@ -1,6 +1,0 @@
-THOI DIEM 2026-10-24T00:15:18+07:00
-LENH docker compose exec -T nginx nginx -t
-EXIT 0
-
-nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
-nginx: configuration file /etc/nginx/nginx.conf test is successful

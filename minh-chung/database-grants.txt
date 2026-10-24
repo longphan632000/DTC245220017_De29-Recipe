@@ -1,2 +1,0 @@
-GRANT USAGE ON *.* TO `recipe_user`@`%`
-GRANT SELECT, INSERT, UPDATE, DELETE ON `recipe_db`.* TO `recipe_user`@`%`
